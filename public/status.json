@@ -1,0 +1,479 @@
+{
+  "generatedAt": "2026-09-16T23:47:42.701Z",
+  "owner": "audiovido",
+  "refreshMinutes": 5,
+  "projects": [
+    {
+      "id": "yodaw-core",
+      "name": "YODAW Core",
+      "kind": "Platform Core",
+      "repoAliases": [
+        "yodaw",
+        "yodaw-core",
+        "yodaw-core-platform"
+      ],
+      "summary": "مغز مرکزی YODAW برای orchestration، shared memory، routing و self-learning.",
+      "progress": null,
+      "done": [
+        "معماری Core و Labها تعریف شده",
+        "Shared-memory و handoff direction تثبیت شده",
+        "Self-learning loop به‌عنوان قابلیت Core تعریف شده"
+      ],
+      "doing": [
+        "یکپارچه‌سازی Labها و execution platform",
+        "Production reliability و integration evidence"
+      ],
+      "todo": [
+        "End-to-end verification بین Labها",
+        "Release readiness از remote Git واقعی"
+      ],
+      "blockers": [
+        "درصد قطعی باید از وضعیت واقعی repo تأیید شود."
+      ],
+      "guide": "اول integration evidence و runtime reliability را معیار قرار بده.",
+      "repo": "https://github.com/audiovido/yodaw-code-core",
+      "attention": true,
+      "attentionReason": "Workflow: failure",
+      "live": {
+        "pushedAt": "2026-09-14T23:46:08Z",
+        "updatedAt": "2026-09-14T14:19:54Z",
+        "defaultBranch": "master",
+        "language": "Python",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "333fd006",
+          "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+          "date": "2026-09-14T14:15:24Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "333fd006",
+            "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+            "date": "2026-09-14T14:15:24Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/333fd0060c381fa15193024e5436629d6d813ec0"
+          },
+          {
+            "sha": "44a4692e",
+            "message": "docs: YODAW Coder V1 final recovery & graduation report",
+            "date": "2026-09-14T14:01:13Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/44a4692efeed019e55c95682a98e742560791359"
+          },
+          {
+            "sha": "cdf64e72",
+            "message": "fix(scripts): clean-machine validator must launch 'yodaw serve' not the CLI REPL",
+            "date": "2026-09-14T13:52:20Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/cdf64e724ea2b4800131b09ff02de147f5976446"
+          },
+          {
+            "sha": "f0bda249",
+            "message": "fix(intelligence): keep PlanParseError signal when test seams reject intelligence kwarg",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/f0bda2490989e58c361a170a387c609e47d52e02"
+          },
+          {
+            "sha": "afef7f14",
+            "message": "feat(intelligence): wire elite intelligence into coder brain and worker",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/afef7f141ee94abbd98f7cae0e1e4f2e476fb648"
+          }
+        ],
+        "workflow": {
+          "name": "coder-regression",
+          "status": "completed",
+          "conclusion": "failure",
+          "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
+          "updatedAt": "2026-09-14T14:20:16Z"
+        },
+        "contract": false
+      }
+    },
+    {
+      "id": "codgar",
+      "name": "CODGAR",
+      "kind": "YODAW Coder",
+      "repoAliases": [
+        "codgar",
+        "kodgar",
+        "yodaw-coder",
+        "coder"
+      ],
+      "summary": "ایجنت کدنویسی YODAW با runtime چندمستاجره، worker orchestration، benchmark و UI تجاری.",
+      "progress": 90,
+      "done": [
+        "Stage 9: 118 PASS / 0 FAIL / 2 WARN",
+        "v1.0.1 red-team: 507 PASS / 0 FAIL",
+        "Multi-tenant runtime، quotas، fairness و audit trail",
+        "Exactly-once learning outbox"
+      ],
+      "doing": [
+        "React UI دوزبانه و responsive",
+        "Production release wiring",
+        "Independent benchmark / worker validation"
+      ],
+      "todo": [
+        "Frontend ↔ backend final verification",
+        "Remote release audit",
+        "Publish + observability"
+      ],
+      "blockers": [
+        "آخرین worker/frontend state باید از Git همگام شود."
+      ],
+      "guide": "فقط remote HEAD، benchmark مستقل و wiring واقعی UI/API معیار release باشند.",
+      "live": null,
+      "attention": true,
+      "attentionReason": "Repo پیدا نشد"
+    },
+    {
+      "id": "unreal-agent",
+      "name": "YODAW Unreal Agent",
+      "kind": "Unreal Automation",
+      "repoAliases": [
+        "unreal-agent",
+        "yodaw-unreal-agent",
+        "aivido-unreal",
+        "unreal"
+      ],
+      "summary": "Pipeline خودکار ساخت، کنترل، تست و تحویل پروژه‌های Unreal Engine.",
+      "progress": 86,
+      "done": [
+        "67 tools PASS",
+        "102/102 live steps PASS",
+        "AV Cinema: 17/17 runtime assertions PASS",
+        "AvaLive MetaHuman speech proof PASS",
+        "Deterministic dispatch / retry / cleanup / guards"
+      ],
+      "doing": [
+        "AAA visual/UI quality pass",
+        "MAX integration track",
+        "Visual Director quality iteration"
+      ],
+      "todo": [
+        "Planner gap closure",
+        "Final packaged/runtime verification",
+        "Release-grade UX polish"
+      ],
+      "blockers": [
+        "بخشی از gapها مربوط به UE API است."
+      ],
+      "guide": "Quality gate فقط با packaged/runtime evidence پاس شود.",
+      "repo": "https://github.com/audiovido/unreal-agent",
+      "attention": null,
+      "attentionReason": null,
+      "live": {
+        "pushedAt": "2026-09-15T18:05:54Z",
+        "updatedAt": "2026-09-13T17:07:31Z",
+        "defaultBranch": "main",
+        "language": "Python",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "410ca873",
+          "message": "Wire the Ava UI to the real /api/command runtime and put the world first",
+          "date": "2026-09-13T17:02:15Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "410ca873",
+            "message": "Wire the Ava UI to the real /api/command runtime and put the world first",
+            "date": "2026-09-13T17:02:15Z",
+            "url": "https://github.com/audiovido/unreal-agent/commit/410ca873d9bde1145e395e3f961fefe1ccf61250"
+          },
+          {
+            "sha": "c5dee3d2",
+            "message": "Fix Visual RC gates: semantic Western readability + fresh evidence contract",
+            "date": "2026-09-13T11:50:12Z",
+            "url": "https://github.com/audiovido/unreal-agent/commit/c5dee3d22df455d52e2c50a6627f7050ea7a3e9d"
+          },
+          {
+            "sha": "5affd427",
+            "message": "Add foreground-session bridge tools: hero fix, liveness proof, state staging",
+            "date": "2026-09-13T08:28:18Z",
+            "url": "https://github.com/audiovido/unreal-agent/commit/5affd4278ea0b412e60da6992abe46a1d97b583e"
+          },
+          {
+            "sha": "82c00156",
+            "message": "Add overnight AIVIDO visual-sprint bridge tooling",
+            "date": "2026-09-13T01:21:18Z",
+            "url": "https://github.com/audiovido/unreal-agent/commit/82c001565f26f507abfce66fb34b1aa3260a599e"
+          },
+          {
+            "sha": "4f2d0707",
+            "message": "Add AIVIDO Visual RC Acceptance System for Visual Vertical Slice V1",
+            "date": "2026-09-12T20:51:52Z",
+            "url": "https://github.com/audiovido/unreal-agent/commit/4f2d0707b8e9818fa38b5897df39c03045235b26"
+          }
+        ],
+        "workflow": null,
+        "contract": false
+      }
+    },
+    {
+      "id": "aivido",
+      "name": "Aivido",
+      "kind": "3D Product",
+      "repoAliases": [
+        "aivido",
+        "aivido-app",
+        "audiovido-living-city"
+      ],
+      "summary": "محصول سه‌بعدی تعاملی روی pipeline Unreal Agent؛ rooms، avatar، cinema و AvaLive.",
+      "progress": null,
+      "done": [
+        "Cinema runtime graduation",
+        "AvaLive handoff / speech proof",
+        "Premium living-room specification"
+      ],
+      "doing": [
+        "MAX integration",
+        "AAA scene/UI quality"
+      ],
+      "todo": [
+        "Final product loop",
+        "Packaging / release validation",
+        "Final UX polish"
+      ],
+      "blockers": [
+        "Product readiness باید جدا از engine readiness سنجیده شود."
+      ],
+      "guide": "برای Aivido KPI مستقل محصول نگه دار.",
+      "live": null,
+      "attention": true,
+      "attentionReason": "Repo پیدا نشد"
+    },
+    {
+      "id": "marketing-agent",
+      "name": "YODAW Marketing Agent",
+      "kind": "Growth Agent",
+      "repoAliases": [
+        "yodaw-marketing",
+        "marketing-agent",
+        "marketing"
+      ],
+      "summary": "Foreman + workerهای content، SEO، creative، campaign و growth.",
+      "progress": null,
+      "done": [
+        "Architecture و worker roles تعریف شده",
+        "Campaign/acquisition direction تعریف شده"
+      ],
+      "doing": [
+        "Parallel implementation track"
+      ],
+      "todo": [
+        "Campaign execution loop",
+        "Analytics / attribution / budget guardrails",
+        "Production tests"
+      ],
+      "blockers": [
+        "آخرین worker run باید از repo تأیید شود."
+      ],
+      "guide": "Outcome-based بماند: acquisition، conversion و evidence؛ نه صرفاً content.",
+      "live": null,
+      "attention": true,
+      "attentionReason": "Repo پیدا نشد"
+    },
+    {
+      "id": "startup-builder",
+      "name": "YODAW Startup Builder",
+      "kind": "Startup Factory",
+      "repoAliases": [
+        "yodaw-startup",
+        "startup-builder",
+        "startup-agent"
+      ],
+      "summary": "Orchestrator ساخت استارتاپ از research تا coding، business و marketing.",
+      "progress": null,
+      "done": [
+        "High-level architecture تعریف شده",
+        "Coder + Marketing + Business orchestration direction تعریف شده"
+      ],
+      "doing": [
+        "Parallel build track"
+      ],
+      "todo": [
+        "End-to-end startup workflow",
+        "Approvals / budgets / quotas",
+        "Cross-agent handoff tests",
+        "Release-quality demo startup"
+      ],
+      "blockers": [
+        "وضعیت workerها نیاز به sync دارد."
+      ],
+      "guide": "منطق تخصصی Labها را تکرار نکند؛ orchestration و guardrails را نگه دارد.",
+      "live": null,
+      "attention": true,
+      "attentionReason": "Repo پیدا نشد"
+    },
+    {
+      "id": "business-research",
+      "name": "YODAW Business / Research",
+      "kind": "Research & Strategy",
+      "repoAliases": [
+        "yodaw-research",
+        "business-agent",
+        "research-agent",
+        "research"
+      ],
+      "summary": "Market research، competitor analysis، pricing، business model و evidence.",
+      "progress": null,
+      "done": [
+        "Research Lab به‌عنوان Lab اصلی تعریف شده"
+      ],
+      "doing": [
+        "Business / Research implementation track"
+      ],
+      "todo": [
+        "Source-backed pipeline",
+        "Pricing/market artifacts",
+        "Startup Builder integration",
+        "Freshness evaluation"
+      ],
+      "blockers": [
+        "Git evidence هنوز باید sync شود."
+      ],
+      "guide": "هر recommendation باید source، date و confidence داشته باشد.",
+      "live": null,
+      "attention": true,
+      "attentionReason": "Repo پیدا نشد"
+    },
+    {
+      "id": "lexamble",
+      "name": "Lexamble",
+      "kind": "Naming Agent",
+      "repoAliases": [
+        "lexamble",
+        "name-lab",
+        "naming-agent"
+      ],
+      "summary": "Naming strategy با Route Dice، Fusion/Compound و Iconic Naming Pattern Library.",
+      "progress": null,
+      "done": [
+        "Brand name Lexamble انتخاب شده",
+        "Naming methodology تعریف شده",
+        "Bilingual/domain/trademark requirements تعریف شده"
+      ],
+      "doing": [
+        "Publishable agent architecture/profile"
+      ],
+      "todo": [
+        "Implementation repo",
+        "Availability/trademark automation",
+        "Name-quality benchmark",
+        "Public UI"
+      ],
+      "blockers": [],
+      "guide": "Strategy-first بماند و generic name generator نشود.",
+      "live": null,
+      "attention": true,
+      "attentionReason": "Repo پیدا نشد"
+    },
+    {
+      "id": "unity-agent",
+      "name": "YODAW Unity Agent",
+      "kind": "Unity Automation",
+      "repoAliases": [
+        "unity-agent",
+        "yodaw-unity",
+        "unity"
+      ],
+      "summary": "نسخه Unity معماری agent/workers برای automation ساخت و تست پروژه‌ها.",
+      "progress": null,
+      "done": [
+        "Architecture parity با Unreal Agent تعریف شده",
+        "Unity Search Room brief تعریف شده"
+      ],
+      "doing": [],
+      "todo": [
+        "Sync repository واقعی",
+        "Tool/runtime bridge",
+        "Automated scene/app tests",
+        "Release pipeline"
+      ],
+      "blockers": [
+        "وضعیت جدید باید از Git تأیید شود."
+      ],
+      "guide": "اول repo و آخرین commit sync شود؛ بعد progress واقعی محاسبه شود.",
+      "live": null,
+      "attention": true,
+      "attentionReason": "Repo پیدا نشد"
+    },
+    {
+      "id": "audiovido",
+      "name": "Audiovido World",
+      "kind": "Interactive World",
+      "repoAliases": [
+        "audiovido",
+        "audiovido-world",
+        "living-city"
+      ],
+      "summary": "جهان تعاملی چندبخشی شامل Cinema، Music، Meditation، Home، Creator و Arena.",
+      "progress": null,
+      "done": [
+        "District/world concept تعریف شده",
+        "Cinema runtime assertions PASS"
+      ],
+      "doing": [
+        "همگرایی با Aivido product architecture"
+      ],
+      "todo": [
+        "تفکیک scope نهایی Audiovido vs Aivido",
+        "World content pipeline",
+        "Product release plan"
+      ],
+      "blockers": [
+        "مرز Audiovido و Aivido باید یکدست شود."
+      ],
+      "guide": "اگر زیرمجموعه Aivido شد، در dashboard به subproject تبدیل شود.",
+      "repo": "https://github.com/audiovido/AudioVidoLivingCity",
+      "attention": true,
+      "attentionReason": "بیش از 6 روز بدون push",
+      "live": {
+        "pushedAt": "2026-09-10T17:18:59Z",
+        "updatedAt": "2026-08-24T01:44:07Z",
+        "defaultBranch": "master",
+        "language": "C++",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "a69651cd",
+          "message": "Overnight 04: 4 - HUD / MENUS / BUTTONS / NAVIGATION",
+          "date": "2026-08-24T01:43:39Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "a69651cd",
+            "message": "Overnight 04: 4 - HUD / MENUS / BUTTONS / NAVIGATION",
+            "date": "2026-08-24T01:43:39Z",
+            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/a69651cd0b701de3c5f558a0eec1b24b44a16000"
+          },
+          {
+            "sha": "3f9f9322",
+            "message": "Overnight 01: 1 - COMPLETE PRODUCT/PROJECT AUDIT",
+            "date": "2026-08-24T00:58:11Z",
+            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/3f9f9322de5dd071333d050373ab508487a55ca9"
+          },
+          {
+            "sha": "104603b1",
+            "message": "Add Blueprint graph node deletion support",
+            "date": "2026-08-23T22:57:44Z",
+            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/104603b1d26dd7e5d1305b692f145c1deee95753"
+          },
+          {
+            "sha": "1b130955",
+            "message": "Add venue signage and night lighting mood",
+            "date": "2026-08-23T22:22:31Z",
+            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/1b130955f8641d6821d3aed8455939f6b9a5eecc"
+          },
+          {
+            "sha": "22707173",
+            "message": "Build distinct venue silhouettes and public realm",
+            "date": "2026-08-23T22:16:18Z",
+            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/22707173b64d63b76222fd4ec74529a3677bdd7b"
+          }
+        ],
+        "workflow": null,
+        "contract": false
+      }
+    }
+  ]
+}

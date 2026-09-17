@@ -25,12 +25,26 @@ function norm(s=""){ return s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/
 async function listOwnerRepos(){
   if(!owner) return [];
   let out=[];
-  for(let page=1;page<=3;page++){
-    const batch=await api(`/users/${owner}/repos?per_page=100&page=${page}&sort=updated`);
+
+  for(let page=1;page<=5;page++){
+    const endpoint = process.env.DASHBOARD_GH_TOKEN
+      ? `/user/repos?visibility=all&affiliation=owner,collaborator,organization_member&per_page=100&page=${page}&sort=updated`
+      : `/users/${owner}/repos?per_page=100&page=${page}&sort=updated`;
+
+    const batch = await api(endpoint);
+
     out.push(...batch);
-    if(batch.length<100) break;
+
+    if(batch.length < 100) break;
   }
-  return out;
+
+  const unique = new Map();
+
+  for(const repo of out){
+    unique.set(repo.full_name, repo);
+  }
+
+  return [...unique.values()];
 }
 
 function resolveRepo(project,repos){

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T23:47:42.701Z",
+  "generatedAt": "2026-09-17T00:04:38.880Z",
   "owner": "audiovido",
   "refreshMinutes": 5,
   "projects": [
@@ -31,59 +31,47 @@
         "درصد قطعی باید از وضعیت واقعی repo تأیید شود."
       ],
       "guide": "اول integration evidence و runtime reliability را معیار قرار بده.",
-      "repo": "https://github.com/audiovido/yodaw-code-core",
+      "repo": "https://github.com/audiovido/yodaw-live-control",
       "attention": true,
       "attentionReason": "Workflow: failure",
       "live": {
-        "pushedAt": "2026-09-14T23:46:08Z",
-        "updatedAt": "2026-09-14T14:19:54Z",
-        "defaultBranch": "master",
-        "language": "Python",
+        "pushedAt": "2026-09-16T23:59:46Z",
+        "updatedAt": "2026-09-17T00:04:31Z",
+        "defaultBranch": "main",
+        "language": "JavaScript",
         "openPRs": 0,
         "openIssues": 0,
         "latestCommit": {
-          "sha": "333fd006",
-          "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
-          "date": "2026-09-14T14:15:24Z"
+          "sha": "819f4175",
+          "message": "Trigger YODAW Live Control deployment",
+          "date": "2026-09-16T23:59:44Z"
         },
         "recentCommits": [
           {
-            "sha": "333fd006",
-            "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
-            "date": "2026-09-14T14:15:24Z",
-            "url": "https://github.com/audiovido/yodaw-code-core/commit/333fd0060c381fa15193024e5436629d6d813ec0"
+            "sha": "819f4175",
+            "message": "Trigger YODAW Live Control deployment",
+            "date": "2026-09-16T23:59:44Z",
+            "url": "https://github.com/audiovido/yodaw-live-control/commit/819f4175d0238ea04e5e496a306379348d18689f"
           },
           {
-            "sha": "44a4692e",
-            "message": "docs: YODAW Coder V1 final recovery & graduation report",
-            "date": "2026-09-14T14:01:13Z",
-            "url": "https://github.com/audiovido/yodaw-code-core/commit/44a4692efeed019e55c95682a98e742560791359"
+            "sha": "2fa3bdf1",
+            "message": "Add YODAW dashboard deployment and sync tooling",
+            "date": "2026-09-16T23:58:55Z",
+            "url": "https://github.com/audiovido/yodaw-live-control/commit/2fa3bdf1ab18c287bdd11b99e67aa04c4756baf7"
           },
           {
-            "sha": "cdf64e72",
-            "message": "fix(scripts): clean-machine validator must launch 'yodaw serve' not the CLI REPL",
-            "date": "2026-09-14T13:52:20Z",
-            "url": "https://github.com/audiovido/yodaw-code-core/commit/cdf64e724ea2b4800131b09ff02de147f5976446"
-          },
-          {
-            "sha": "f0bda249",
-            "message": "fix(intelligence): keep PlanParseError signal when test seams reject intelligence kwarg",
-            "date": "2026-09-14T13:23:15Z",
-            "url": "https://github.com/audiovido/yodaw-code-core/commit/f0bda2490989e58c361a170a387c609e47d52e02"
-          },
-          {
-            "sha": "afef7f14",
-            "message": "feat(intelligence): wire elite intelligence into coder brain and worker",
-            "date": "2026-09-14T13:23:15Z",
-            "url": "https://github.com/audiovido/yodaw-code-core/commit/afef7f141ee94abbd98f7cae0e1e4f2e476fb648"
+            "sha": "2a068da1",
+            "message": "Build YODAW Live Control dashboard",
+            "date": "2026-09-16T23:58:18Z",
+            "url": "https://github.com/audiovido/yodaw-live-control/commit/2a068da1196c3486be4eda20ecc6504390715f8e"
           }
         ],
         "workflow": {
-          "name": "coder-regression",
+          "name": "YODAW Live Sync + Deploy",
           "status": "completed",
           "conclusion": "failure",
-          "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
-          "updatedAt": "2026-09-14T14:20:16Z"
+          "url": "https://github.com/audiovido/yodaw-live-control/actions/runs/35164668258",
+          "updatedAt": "2026-09-17T00:00:08Z"
         },
         "contract": false
       }
@@ -237,9 +225,32 @@
         "Product readiness باید جدا از engine readiness سنجیده شود."
       ],
       "guide": "برای Aivido KPI مستقل محصول نگه دار.",
-      "live": null,
-      "attention": true,
-      "attentionReason": "Repo پیدا نشد"
+      "repo": "https://github.com/audiovido/AividoAgentHost",
+      "attention": null,
+      "attentionReason": null,
+      "live": {
+        "pushedAt": "2026-09-15T18:05:15Z",
+        "updatedAt": "2026-09-15T16:55:57Z",
+        "defaultBranch": "shadow-ready-20260915-202414",
+        "language": "C++",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "a0cf14a7",
+          "message": "Aivido Shadow-ready snapshot 20260915-202414",
+          "date": "2026-09-15T16:54:26Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "a0cf14a7",
+            "message": "Aivido Shadow-ready snapshot 20260915-202414",
+            "date": "2026-09-15T16:54:26Z",
+            "url": "https://github.com/audiovido/AividoAgentHost/commit/a0cf14a7ad2f35326723e0ad58e37fff2b8e0450"
+          }
+        ],
+        "workflow": null,
+        "contract": false
+      }
     },
     {
       "id": "marketing-agent",
@@ -424,51 +435,33 @@
         "مرز Audiovido و Aivido باید یکدست شود."
       ],
       "guide": "اگر زیرمجموعه Aivido شد، در dashboard به subproject تبدیل شود.",
-      "repo": "https://github.com/audiovido/AudioVidoLivingCity",
+      "repo": "https://github.com/audiovido/AudioVido",
       "attention": true,
-      "attentionReason": "بیش از 6 روز بدون push",
+      "attentionReason": "بیش از 51 روز بدون push",
       "live": {
-        "pushedAt": "2026-09-10T17:18:59Z",
-        "updatedAt": "2026-08-24T01:44:07Z",
-        "defaultBranch": "master",
-        "language": "C++",
+        "pushedAt": "2026-07-27T15:46:56Z",
+        "updatedAt": "2026-07-27T15:49:32Z",
+        "defaultBranch": "main",
+        "language": null,
         "openPRs": 0,
         "openIssues": 0,
         "latestCommit": {
-          "sha": "a69651cd",
-          "message": "Overnight 04: 4 - HUD / MENUS / BUTTONS / NAVIGATION",
-          "date": "2026-08-24T01:43:39Z"
+          "sha": "893fda63",
+          "message": "add file",
+          "date": "2026-07-27T15:46:55Z"
         },
         "recentCommits": [
           {
-            "sha": "a69651cd",
-            "message": "Overnight 04: 4 - HUD / MENUS / BUTTONS / NAVIGATION",
-            "date": "2026-08-24T01:43:39Z",
-            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/a69651cd0b701de3c5f558a0eec1b24b44a16000"
+            "sha": "893fda63",
+            "message": "add file",
+            "date": "2026-07-27T15:46:55Z",
+            "url": "https://github.com/audiovido/AudioVido/commit/893fda63d8f603b30b01e50490de6ef694654ed0"
           },
           {
-            "sha": "3f9f9322",
-            "message": "Overnight 01: 1 - COMPLETE PRODUCT/PROJECT AUDIT",
-            "date": "2026-08-24T00:58:11Z",
-            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/3f9f9322de5dd071333d050373ab508487a55ca9"
-          },
-          {
-            "sha": "104603b1",
-            "message": "Add Blueprint graph node deletion support",
-            "date": "2026-08-23T22:57:44Z",
-            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/104603b1d26dd7e5d1305b692f145c1deee95753"
-          },
-          {
-            "sha": "1b130955",
-            "message": "Add venue signage and night lighting mood",
-            "date": "2026-08-23T22:22:31Z",
-            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/1b130955f8641d6821d3aed8455939f6b9a5eecc"
-          },
-          {
-            "sha": "22707173",
-            "message": "Build distinct venue silhouettes and public realm",
-            "date": "2026-08-23T22:16:18Z",
-            "url": "https://github.com/audiovido/AudioVidoLivingCity/commit/22707173b64d63b76222fd4ec74529a3677bdd7b"
+            "sha": "0747ad68",
+            "message": "Initial commit",
+            "date": "2026-07-27T11:23:51Z",
+            "url": "https://github.com/audiovido/AudioVido/commit/0747ad686445141c573ef67a6a121b3fbf6467ad"
           }
         ],
         "workflow": null,

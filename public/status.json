@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T00:04:38.880Z",
+  "generatedAt": "2026-09-17T00:09:28.077Z",
   "owner": "audiovido",
   "refreshMinutes": 5,
   "projects": [
@@ -31,47 +31,60 @@
         "درصد قطعی باید از وضعیت واقعی repo تأیید شود."
       ],
       "guide": "اول integration evidence و runtime reliability را معیار قرار بده.",
-      "repo": "https://github.com/audiovido/yodaw-live-control",
+      "repoFullName": "audiovido/yodaw-code-core",
+      "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
       "attentionReason": "Workflow: failure",
       "live": {
-        "pushedAt": "2026-09-16T23:59:46Z",
-        "updatedAt": "2026-09-17T00:04:31Z",
-        "defaultBranch": "main",
-        "language": "JavaScript",
+        "pushedAt": "2026-09-14T23:46:08Z",
+        "updatedAt": "2026-09-14T14:19:54Z",
+        "defaultBranch": "master",
+        "language": "Python",
         "openPRs": 0,
         "openIssues": 0,
         "latestCommit": {
-          "sha": "819f4175",
-          "message": "Trigger YODAW Live Control deployment",
-          "date": "2026-09-16T23:59:44Z"
+          "sha": "333fd006",
+          "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+          "date": "2026-09-14T14:15:24Z"
         },
         "recentCommits": [
           {
-            "sha": "819f4175",
-            "message": "Trigger YODAW Live Control deployment",
-            "date": "2026-09-16T23:59:44Z",
-            "url": "https://github.com/audiovido/yodaw-live-control/commit/819f4175d0238ea04e5e496a306379348d18689f"
+            "sha": "333fd006",
+            "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+            "date": "2026-09-14T14:15:24Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/333fd0060c381fa15193024e5436629d6d813ec0"
           },
           {
-            "sha": "2fa3bdf1",
-            "message": "Add YODAW dashboard deployment and sync tooling",
-            "date": "2026-09-16T23:58:55Z",
-            "url": "https://github.com/audiovido/yodaw-live-control/commit/2fa3bdf1ab18c287bdd11b99e67aa04c4756baf7"
+            "sha": "44a4692e",
+            "message": "docs: YODAW Coder V1 final recovery & graduation report",
+            "date": "2026-09-14T14:01:13Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/44a4692efeed019e55c95682a98e742560791359"
           },
           {
-            "sha": "2a068da1",
-            "message": "Build YODAW Live Control dashboard",
-            "date": "2026-09-16T23:58:18Z",
-            "url": "https://github.com/audiovido/yodaw-live-control/commit/2a068da1196c3486be4eda20ecc6504390715f8e"
+            "sha": "cdf64e72",
+            "message": "fix(scripts): clean-machine validator must launch 'yodaw serve' not the CLI REPL",
+            "date": "2026-09-14T13:52:20Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/cdf64e724ea2b4800131b09ff02de147f5976446"
+          },
+          {
+            "sha": "f0bda249",
+            "message": "fix(intelligence): keep PlanParseError signal when test seams reject intelligence kwarg",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/f0bda2490989e58c361a170a387c609e47d52e02"
+          },
+          {
+            "sha": "afef7f14",
+            "message": "feat(intelligence): wire elite intelligence into coder brain and worker",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/afef7f141ee94abbd98f7cae0e1e4f2e476fb648"
           }
         ],
         "workflow": {
-          "name": "YODAW Live Sync + Deploy",
+          "name": "coder-regression",
           "status": "completed",
           "conclusion": "failure",
-          "url": "https://github.com/audiovido/yodaw-live-control/actions/runs/35164668258",
-          "updatedAt": "2026-09-17T00:00:08Z"
+          "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
+          "updatedAt": "2026-09-14T14:20:16Z"
         },
         "contract": false
       }
@@ -108,9 +121,63 @@
         "آخرین worker/frontend state باید از Git همگام شود."
       ],
       "guide": "فقط remote HEAD، benchmark مستقل و wiring واقعی UI/API معیار release باشند.",
-      "live": null,
+      "repoFullName": "audiovido/yodaw-code-core",
+      "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
-      "attentionReason": "Repo پیدا نشد"
+      "attentionReason": "Workflow: failure",
+      "live": {
+        "pushedAt": "2026-09-14T23:46:08Z",
+        "updatedAt": "2026-09-14T14:19:54Z",
+        "defaultBranch": "master",
+        "language": "Python",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "333fd006",
+          "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+          "date": "2026-09-14T14:15:24Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "333fd006",
+            "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+            "date": "2026-09-14T14:15:24Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/333fd0060c381fa15193024e5436629d6d813ec0"
+          },
+          {
+            "sha": "44a4692e",
+            "message": "docs: YODAW Coder V1 final recovery & graduation report",
+            "date": "2026-09-14T14:01:13Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/44a4692efeed019e55c95682a98e742560791359"
+          },
+          {
+            "sha": "cdf64e72",
+            "message": "fix(scripts): clean-machine validator must launch 'yodaw serve' not the CLI REPL",
+            "date": "2026-09-14T13:52:20Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/cdf64e724ea2b4800131b09ff02de147f5976446"
+          },
+          {
+            "sha": "f0bda249",
+            "message": "fix(intelligence): keep PlanParseError signal when test seams reject intelligence kwarg",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/f0bda2490989e58c361a170a387c609e47d52e02"
+          },
+          {
+            "sha": "afef7f14",
+            "message": "feat(intelligence): wire elite intelligence into coder brain and worker",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/afef7f141ee94abbd98f7cae0e1e4f2e476fb648"
+          }
+        ],
+        "workflow": {
+          "name": "coder-regression",
+          "status": "completed",
+          "conclusion": "failure",
+          "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
+          "updatedAt": "2026-09-14T14:20:16Z"
+        },
+        "contract": false
+      }
     },
     {
       "id": "unreal-agent",
@@ -145,6 +212,7 @@
         "بخشی از gapها مربوط به UE API است."
       ],
       "guide": "Quality gate فقط با packaged/runtime evidence پاس شود.",
+      "repoFullName": "audiovido/unreal-agent",
       "repo": "https://github.com/audiovido/unreal-agent",
       "attention": null,
       "attentionReason": null,
@@ -225,6 +293,7 @@
         "Product readiness باید جدا از engine readiness سنجیده شود."
       ],
       "guide": "برای Aivido KPI مستقل محصول نگه دار.",
+      "repoFullName": "audiovido/AividoAgentHost",
       "repo": "https://github.com/audiovido/AividoAgentHost",
       "attention": null,
       "attentionReason": null,
@@ -279,9 +348,63 @@
         "آخرین worker run باید از repo تأیید شود."
       ],
       "guide": "Outcome-based بماند: acquisition، conversion و evidence؛ نه صرفاً content.",
-      "live": null,
+      "repoFullName": "audiovido/yodaw-code-core",
+      "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
-      "attentionReason": "Repo پیدا نشد"
+      "attentionReason": "Workflow: failure",
+      "live": {
+        "pushedAt": "2026-09-14T23:46:08Z",
+        "updatedAt": "2026-09-14T14:19:54Z",
+        "defaultBranch": "master",
+        "language": "Python",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "333fd006",
+          "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+          "date": "2026-09-14T14:15:24Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "333fd006",
+            "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+            "date": "2026-09-14T14:15:24Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/333fd0060c381fa15193024e5436629d6d813ec0"
+          },
+          {
+            "sha": "44a4692e",
+            "message": "docs: YODAW Coder V1 final recovery & graduation report",
+            "date": "2026-09-14T14:01:13Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/44a4692efeed019e55c95682a98e742560791359"
+          },
+          {
+            "sha": "cdf64e72",
+            "message": "fix(scripts): clean-machine validator must launch 'yodaw serve' not the CLI REPL",
+            "date": "2026-09-14T13:52:20Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/cdf64e724ea2b4800131b09ff02de147f5976446"
+          },
+          {
+            "sha": "f0bda249",
+            "message": "fix(intelligence): keep PlanParseError signal when test seams reject intelligence kwarg",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/f0bda2490989e58c361a170a387c609e47d52e02"
+          },
+          {
+            "sha": "afef7f14",
+            "message": "feat(intelligence): wire elite intelligence into coder brain and worker",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/afef7f141ee94abbd98f7cae0e1e4f2e476fb648"
+          }
+        ],
+        "workflow": {
+          "name": "coder-regression",
+          "status": "completed",
+          "conclusion": "failure",
+          "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
+          "updatedAt": "2026-09-14T14:20:16Z"
+        },
+        "contract": false
+      }
     },
     {
       "id": "startup-builder",
@@ -311,9 +434,63 @@
         "وضعیت workerها نیاز به sync دارد."
       ],
       "guide": "منطق تخصصی Labها را تکرار نکند؛ orchestration و guardrails را نگه دارد.",
-      "live": null,
+      "repoFullName": "audiovido/yodaw-code-core",
+      "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
-      "attentionReason": "Repo پیدا نشد"
+      "attentionReason": "Workflow: failure",
+      "live": {
+        "pushedAt": "2026-09-14T23:46:08Z",
+        "updatedAt": "2026-09-14T14:19:54Z",
+        "defaultBranch": "master",
+        "language": "Python",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "333fd006",
+          "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+          "date": "2026-09-14T14:15:24Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "333fd006",
+            "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+            "date": "2026-09-14T14:15:24Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/333fd0060c381fa15193024e5436629d6d813ec0"
+          },
+          {
+            "sha": "44a4692e",
+            "message": "docs: YODAW Coder V1 final recovery & graduation report",
+            "date": "2026-09-14T14:01:13Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/44a4692efeed019e55c95682a98e742560791359"
+          },
+          {
+            "sha": "cdf64e72",
+            "message": "fix(scripts): clean-machine validator must launch 'yodaw serve' not the CLI REPL",
+            "date": "2026-09-14T13:52:20Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/cdf64e724ea2b4800131b09ff02de147f5976446"
+          },
+          {
+            "sha": "f0bda249",
+            "message": "fix(intelligence): keep PlanParseError signal when test seams reject intelligence kwarg",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/f0bda2490989e58c361a170a387c609e47d52e02"
+          },
+          {
+            "sha": "afef7f14",
+            "message": "feat(intelligence): wire elite intelligence into coder brain and worker",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/afef7f141ee94abbd98f7cae0e1e4f2e476fb648"
+          }
+        ],
+        "workflow": {
+          "name": "coder-regression",
+          "status": "completed",
+          "conclusion": "failure",
+          "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
+          "updatedAt": "2026-09-14T14:20:16Z"
+        },
+        "contract": false
+      }
     },
     {
       "id": "business-research",
@@ -343,9 +520,63 @@
         "Git evidence هنوز باید sync شود."
       ],
       "guide": "هر recommendation باید source، date و confidence داشته باشد.",
-      "live": null,
+      "repoFullName": "audiovido/yodaw-code-core",
+      "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
-      "attentionReason": "Repo پیدا نشد"
+      "attentionReason": "Workflow: failure",
+      "live": {
+        "pushedAt": "2026-09-14T23:46:08Z",
+        "updatedAt": "2026-09-14T14:19:54Z",
+        "defaultBranch": "master",
+        "language": "Python",
+        "openPRs": 0,
+        "openIssues": 0,
+        "latestCommit": {
+          "sha": "333fd006",
+          "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+          "date": "2026-09-14T14:15:24Z"
+        },
+        "recentCommits": [
+          {
+            "sha": "333fd006",
+            "message": "release(yodaw-v1): merge verified graduation branch (elite intelligence, verification fixes, real-model E2E, clean-machine acceptance)",
+            "date": "2026-09-14T14:15:24Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/333fd0060c381fa15193024e5436629d6d813ec0"
+          },
+          {
+            "sha": "44a4692e",
+            "message": "docs: YODAW Coder V1 final recovery & graduation report",
+            "date": "2026-09-14T14:01:13Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/44a4692efeed019e55c95682a98e742560791359"
+          },
+          {
+            "sha": "cdf64e72",
+            "message": "fix(scripts): clean-machine validator must launch 'yodaw serve' not the CLI REPL",
+            "date": "2026-09-14T13:52:20Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/cdf64e724ea2b4800131b09ff02de147f5976446"
+          },
+          {
+            "sha": "f0bda249",
+            "message": "fix(intelligence): keep PlanParseError signal when test seams reject intelligence kwarg",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/f0bda2490989e58c361a170a387c609e47d52e02"
+          },
+          {
+            "sha": "afef7f14",
+            "message": "feat(intelligence): wire elite intelligence into coder brain and worker",
+            "date": "2026-09-14T13:23:15Z",
+            "url": "https://github.com/audiovido/yodaw-code-core/commit/afef7f141ee94abbd98f7cae0e1e4f2e476fb648"
+          }
+        ],
+        "workflow": {
+          "name": "coder-regression",
+          "status": "completed",
+          "conclusion": "failure",
+          "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
+          "updatedAt": "2026-09-14T14:20:16Z"
+        },
+        "contract": false
+      }
     },
     {
       "id": "lexamble",
@@ -435,6 +666,7 @@
         "مرز Audiovido و Aivido باید یکدست شود."
       ],
       "guide": "اگر زیرمجموعه Aivido شد، در dashboard به subproject تبدیل شود.",
+      "repoFullName": "audiovido/AudioVido",
       "repo": "https://github.com/audiovido/AudioVido",
       "attention": true,
       "attentionReason": "بیش از 51 روز بدون push",

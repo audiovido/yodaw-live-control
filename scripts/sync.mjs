@@ -48,27 +48,32 @@ async function listOwnerRepos(){
 }
 
 function resolveRepo(project,repos){
+  const candidates = repos.filter(
+    r => r.full_name !== dashboardRepo
+  );
+
+  if(project.repoFullName){
+    const wanted=project.repoFullName.toLowerCase();
+
+    const explicit=candidates.find(
+      r => r.full_name.toLowerCase()===wanted
+    );
+
+    if(explicit) return explicit;
+  }
+
   const aliases=(project.repoAliases||[]).map(norm);
-  let exact=repos.find(r=>aliases.includes(norm(r.name)));
-  if(exact) return exact;
 
-  const scored=repos.map(r=>{
-    const rn=norm(r.name);
-    const text=norm(`${r.name} ${r.description||""}`);
-    let score=0;
-    for(const a of aliases){
-      if(rn===a) score+=10;
-      else if(rn.includes(a)||a.includes(rn)) score+=5;
-      if(text.includes(a)) score+=2;
-    }
-    return {r,score};
-  }).sort((a,b)=>b.score-a.score);
-
-  return scored[0]?.score>=5 ? scored[0].r : null;
+  return candidates.find(
+    r => aliases.includes(norm(r.name))
+  ) || null;
 }
 
-async function getContract(full){
-  const c = await api(`/repos/${full}/contents/.yodaw/status.json`, true);
+async function getContract(full,projectId){
+  const c = await api(
+    `/repos/${full}/contents/.yodaw/projects/${projectId}.json`,
+    true
+  );
   if(!c?.content) return null;
   try {
     return JSON.parse(Buffer.from(c.content.replace(/\n/g,""),"base64").toString("utf8"));
@@ -108,7 +113,7 @@ async function hydrate(project,repos){
     api(`/repos/${full}/pulls?state=open&per_page=20`).catch(()=>[]),
     api(`/repos/${full}/issues?state=open&per_page=40`).catch(()=>[]),
     api(`/repos/${full}/actions/runs?per_page=5`).catch(()=>({workflow_runs:[]})),
-    getContract(full).catch(()=>null)
+    getContract(full,project.id).catch(()=>null)
   ]);
 
   const p=mergeContract(project,contract);

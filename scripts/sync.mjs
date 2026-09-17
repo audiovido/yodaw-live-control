@@ -81,20 +81,75 @@ async function getContract(full,projectId){
 }
 
 function mergeContract(base,contract){
-  if(!contract) return base;
+  if(!contract){
+    return {
+      ...base,
+      progress:null,
+      verification:"partial",
+      verificationLabel:"PARTIALLY VERIFIED",
+      statusSource:"seed",
+      contractUpdatedAt:null
+    };
+  }
+
+  const validProgress =
+    Number.isFinite(contract.progress) &&
+    contract.progress >= 0 &&
+    contract.progress <= 100
+      ? contract.progress
+      : null;
+
   return {
     ...base,
-    ...contract,
+
     id:base.id,
-    name:contract.name||base.name,
-    kind:contract.kind||base.kind,
-    summary:contract.summary||base.summary,
-    done:Array.isArray(contract.done)?contract.done:base.done,
-    doing:Array.isArray(contract.doing)?contract.doing:base.doing,
-    todo:Array.isArray(contract.todo)?contract.todo:base.todo,
-    blockers:Array.isArray(contract.blockers)?contract.blockers:base.blockers,
-    guide:contract.guide||base.guide,
-    progress:Number.isFinite(contract.progress)?contract.progress:base.progress
+
+    name:
+      typeof contract.name==="string" && contract.name.trim()
+        ? contract.name
+        : base.name,
+
+    kind:
+      typeof contract.kind==="string" && contract.kind.trim()
+        ? contract.kind
+        : base.kind,
+
+    summary:
+      typeof contract.summary==="string" && contract.summary.trim()
+        ? contract.summary
+        : base.summary,
+
+    progress:validProgress,
+
+    done:
+      Array.isArray(contract.done)
+        ? contract.done
+        : [],
+
+    doing:
+      Array.isArray(contract.doing)
+        ? contract.doing
+        : [],
+
+    todo:
+      Array.isArray(contract.todo)
+        ? contract.todo
+        : [],
+
+    blockers:
+      Array.isArray(contract.blockers)
+        ? contract.blockers
+        : [],
+
+    guide:
+      typeof contract.guide==="string"
+        ? contract.guide
+        : "",
+
+    verification:"verified",
+    verificationLabel:"LIVE VERIFIED",
+    statusSource:"contract",
+    contractUpdatedAt:contract.updatedAt || null
   };
 }
 
@@ -105,7 +160,17 @@ function ageHours(date){
 
 async function hydrate(project,repos){
   const repo=resolveRepo(project,repos);
-  if(!repo) return {...project, live:null, attention:true, attentionReason:"Repo پیدا نشد"};
+  if(!repo) return {
+    ...project,
+    progress:null,
+    live:null,
+    attention:true,
+    attentionReason:"Repo پیدا نشد",
+    verification:"disconnected",
+    verificationLabel:"NOT CONNECTED",
+    statusSource:"seed",
+    contractUpdatedAt:null
+  };
 
   const full=repo.full_name;
   let [commits,pulls,issues,runs,contract] = await Promise.all([
@@ -154,7 +219,10 @@ async function hydrate(project,repos){
         url:latestRun.html_url,
         updatedAt:latestRun.updated_at
       }:null,
-      contract:!!contract
+      contract:!!contract,
+      verification:p.verification,
+      verificationLabel:p.verificationLabel,
+      contractUpdatedAt:p.contractUpdatedAt
     }
   };
 }

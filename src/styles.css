@@ -66,3 +66,40 @@ button{color:inherit}
 .commitsPanel{margin-top:10px}.commitsPanel>a{display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center;text-decoration:none;color:inherit;padding:8px 0;border-top:1px solid #1c2532}.commitsPanel>a:first-of-type{border-top:0}.commitsPanel code{font-size:9px;color:var(--blue)}.commitsPanel a span{font-size:9px;color:#b6c0cf;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.commitsPanel small{font-size:8px;color:var(--sub)}
 @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.metricRow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.hero{padding:30px 16px 18px;align-items:stretch;flex-direction:column}.hero h1{font-size:46px}.syncBox{min-width:0}.container{padding:12px 16px 60px}.overview{grid-template-columns:repeat(2,1fr)}.overview>div{border-bottom:1px solid var(--line)}.controls{align-items:stretch;flex-direction:column}.grid{grid-template-columns:1fr}.modalBackdrop{padding:8px}.modal{padding:19px;border-radius:22px}.detailHero{grid-template-columns:1fr;padding-left:0}.taskGrid,.bottomGrid{grid-template-columns:1fr}.metricRow{grid-template-columns:repeat(2,1fr)}.robotBox{grid-template-columns:42px 1fr}.robotFace{width:42px;height:42px}.robotBox .iconBtn{grid-column:1/-1;width:100%}.commitsPanel>a{grid-template-columns:58px 1fr}.commitsPanel small{display:none}}
+
+.verificationBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  width:max-content;
+  max-width:100%;
+  margin-top:11px;
+  padding:6px 9px;
+  border-radius:999px;
+  font:700 8px/1 Inter,sans-serif;
+  letter-spacing:.08em;
+  border:1px solid var(--line);
+}
+
+.verificationBadge svg{
+  width:12px;
+  height:12px;
+}
+
+.verificationBadge.verified{
+  color:var(--green);
+  background:rgba(88,221,146,.06);
+  border-color:rgba(88,221,146,.22);
+}
+
+.verificationBadge.partial{
+  color:var(--amber);
+  background:rgba(255,189,92,.06);
+  border-color:rgba(255,189,92,.22);
+}
+
+.verificationBadge.disconnected{
+  color:var(--sub);
+  background:rgba(120,130,145,.05);
+  border-color:rgba(120,130,145,.16);
+}

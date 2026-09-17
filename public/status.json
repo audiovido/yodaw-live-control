@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T00:09:28.077Z",
+  "generatedAt": "2026-09-17T00:26:32.980Z",
   "owner": "audiovido",
   "refreshMinutes": 5,
   "projects": [
@@ -32,6 +32,10 @@
       ],
       "guide": "اول integration evidence و runtime reliability را معیار قرار بده.",
       "repoFullName": "audiovido/yodaw-code-core",
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
       "attentionReason": "Workflow: failure",
@@ -86,7 +90,10 @@
           "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
           "updatedAt": "2026-09-14T14:20:16Z"
         },
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     },
     {
@@ -100,7 +107,7 @@
         "coder"
       ],
       "summary": "ایجنت کدنویسی YODAW با runtime چندمستاجره، worker orchestration، benchmark و UI تجاری.",
-      "progress": 90,
+      "progress": null,
       "done": [
         "Stage 9: 118 PASS / 0 FAIL / 2 WARN",
         "v1.0.1 red-team: 507 PASS / 0 FAIL",
@@ -122,6 +129,11 @@
       ],
       "guide": "فقط remote HEAD، benchmark مستقل و wiring واقعی UI/API معیار release باشند.",
       "repoFullName": "audiovido/yodaw-code-core",
+      "historicalProgress": 90,
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
       "attentionReason": "Workflow: failure",
@@ -176,7 +188,10 @@
           "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
           "updatedAt": "2026-09-14T14:20:16Z"
         },
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     },
     {
@@ -190,7 +205,7 @@
         "unreal"
       ],
       "summary": "Pipeline خودکار ساخت، کنترل، تست و تحویل پروژه‌های Unreal Engine.",
-      "progress": 86,
+      "progress": null,
       "done": [
         "67 tools PASS",
         "102/102 live steps PASS",
@@ -213,6 +228,11 @@
       ],
       "guide": "Quality gate فقط با packaged/runtime evidence پاس شود.",
       "repoFullName": "audiovido/unreal-agent",
+      "historicalProgress": 86,
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/unreal-agent",
       "attention": null,
       "attentionReason": null,
@@ -261,7 +281,10 @@
           }
         ],
         "workflow": null,
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     },
     {
@@ -294,6 +317,10 @@
       ],
       "guide": "برای Aivido KPI مستقل محصول نگه دار.",
       "repoFullName": "audiovido/AividoAgentHost",
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/AividoAgentHost",
       "attention": null,
       "attentionReason": null,
@@ -318,7 +345,10 @@
           }
         ],
         "workflow": null,
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     },
     {
@@ -349,6 +379,10 @@
       ],
       "guide": "Outcome-based بماند: acquisition، conversion و evidence؛ نه صرفاً content.",
       "repoFullName": "audiovido/yodaw-code-core",
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
       "attentionReason": "Workflow: failure",
@@ -403,7 +437,10 @@
           "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
           "updatedAt": "2026-09-14T14:20:16Z"
         },
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     },
     {
@@ -435,6 +472,10 @@
       ],
       "guide": "منطق تخصصی Labها را تکرار نکند؛ orchestration و guardrails را نگه دارد.",
       "repoFullName": "audiovido/yodaw-code-core",
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
       "attentionReason": "Workflow: failure",
@@ -489,7 +530,10 @@
           "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
           "updatedAt": "2026-09-14T14:20:16Z"
         },
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     },
     {
@@ -521,6 +565,10 @@
       ],
       "guide": "هر recommendation باید source، date و confidence داشته باشد.",
       "repoFullName": "audiovido/yodaw-code-core",
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/yodaw-code-core",
       "attention": true,
       "attentionReason": "Workflow: failure",
@@ -575,7 +623,10 @@
           "url": "https://github.com/audiovido/yodaw-code-core/actions/runs/34854891660",
           "updatedAt": "2026-09-14T14:20:16Z"
         },
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     },
     {
@@ -605,9 +656,13 @@
       ],
       "blockers": [],
       "guide": "Strategy-first بماند و generic name generator نشود.",
+      "statusSource": "seed",
       "live": null,
       "attention": true,
-      "attentionReason": "Repo پیدا نشد"
+      "attentionReason": "Repo پیدا نشد",
+      "verification": "disconnected",
+      "verificationLabel": "NOT CONNECTED",
+      "contractUpdatedAt": null
     },
     {
       "id": "unity-agent",
@@ -635,9 +690,13 @@
         "وضعیت جدید باید از Git تأیید شود."
       ],
       "guide": "اول repo و آخرین commit sync شود؛ بعد progress واقعی محاسبه شود.",
+      "statusSource": "seed",
       "live": null,
       "attention": true,
-      "attentionReason": "Repo پیدا نشد"
+      "attentionReason": "Repo پیدا نشد",
+      "verification": "disconnected",
+      "verificationLabel": "NOT CONNECTED",
+      "contractUpdatedAt": null
     },
     {
       "id": "audiovido",
@@ -667,6 +726,10 @@
       ],
       "guide": "اگر زیرمجموعه Aivido شد، در dashboard به subproject تبدیل شود.",
       "repoFullName": "audiovido/AudioVido",
+      "statusSource": "seed",
+      "verification": "partial",
+      "verificationLabel": "PARTIALLY VERIFIED",
+      "contractUpdatedAt": null,
       "repo": "https://github.com/audiovido/AudioVido",
       "attention": true,
       "attentionReason": "بیش از 51 روز بدون push",
@@ -697,7 +760,10 @@
           }
         ],
         "workflow": null,
-        "contract": false
+        "contract": false,
+        "verification": "partial",
+        "verificationLabel": "PARTIALLY VERIFIED",
+        "contractUpdatedAt": null
       }
     }
   ]

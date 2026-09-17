@@ -27,7 +27,8 @@
       "درصد قطعی باید از وضعیت واقعی repo تأیید شود."
     ],
     "guide": "اول integration evidence و runtime reliability را معیار قرار بده.",
-    "repoFullName": "audiovido/yodaw-code-core"
+    "repoFullName": "audiovido/yodaw-code-core",
+    "statusSource": "seed"
   },
   {
     "id": "codgar",
@@ -40,7 +41,7 @@
       "coder"
     ],
     "summary": "ایجنت کدنویسی YODAW با runtime چندمستاجره، worker orchestration، benchmark و UI تجاری.",
-    "progress": 90,
+    "progress": null,
     "done": [
       "Stage 9: 118 PASS / 0 FAIL / 2 WARN",
       "v1.0.1 red-team: 507 PASS / 0 FAIL",
@@ -61,7 +62,9 @@
       "آخرین worker/frontend state باید از Git همگام شود."
     ],
     "guide": "فقط remote HEAD، benchmark مستقل و wiring واقعی UI/API معیار release باشند.",
-    "repoFullName": "audiovido/yodaw-code-core"
+    "repoFullName": "audiovido/yodaw-code-core",
+    "historicalProgress": 90,
+    "statusSource": "seed"
   },
   {
     "id": "unreal-agent",
@@ -74,7 +77,7 @@
       "unreal"
     ],
     "summary": "Pipeline خودکار ساخت، کنترل، تست و تحویل پروژه‌های Unreal Engine.",
-    "progress": 86,
+    "progress": null,
     "done": [
       "67 tools PASS",
       "102/102 live steps PASS",
@@ -96,7 +99,9 @@
       "بخشی از gapها مربوط به UE API است."
     ],
     "guide": "Quality gate فقط با packaged/runtime evidence پاس شود.",
-    "repoFullName": "audiovido/unreal-agent"
+    "repoFullName": "audiovido/unreal-agent",
+    "historicalProgress": 86,
+    "statusSource": "seed"
   },
   {
     "id": "aivido",
@@ -127,7 +132,8 @@
       "Product readiness باید جدا از engine readiness سنجیده شود."
     ],
     "guide": "برای Aivido KPI مستقل محصول نگه دار.",
-    "repoFullName": "audiovido/AividoAgentHost"
+    "repoFullName": "audiovido/AividoAgentHost",
+    "statusSource": "seed"
   },
   {
     "id": "marketing-agent",
@@ -156,7 +162,8 @@
       "آخرین worker run باید از repo تأیید شود."
     ],
     "guide": "Outcome-based بماند: acquisition، conversion و evidence؛ نه صرفاً content.",
-    "repoFullName": "audiovido/yodaw-code-core"
+    "repoFullName": "audiovido/yodaw-code-core",
+    "statusSource": "seed"
   },
   {
     "id": "startup-builder",
@@ -186,7 +193,8 @@
       "وضعیت workerها نیاز به sync دارد."
     ],
     "guide": "منطق تخصصی Labها را تکرار نکند؛ orchestration و guardrails را نگه دارد.",
-    "repoFullName": "audiovido/yodaw-code-core"
+    "repoFullName": "audiovido/yodaw-code-core",
+    "statusSource": "seed"
   },
   {
     "id": "business-research",
@@ -216,7 +224,8 @@
       "Git evidence هنوز باید sync شود."
     ],
     "guide": "هر recommendation باید source، date و confidence داشته باشد.",
-    "repoFullName": "audiovido/yodaw-code-core"
+    "repoFullName": "audiovido/yodaw-code-core",
+    "statusSource": "seed"
   },
   {
     "id": "lexamble",
@@ -244,7 +253,8 @@
       "Public UI"
     ],
     "blockers": [],
-    "guide": "Strategy-first بماند و generic name generator نشود."
+    "guide": "Strategy-first بماند و generic name generator نشود.",
+    "statusSource": "seed"
   },
   {
     "id": "unity-agent",
@@ -271,7 +281,8 @@
     "blockers": [
       "وضعیت جدید باید از Git تأیید شود."
     ],
-    "guide": "اول repo و آخرین commit sync شود؛ بعد progress واقعی محاسبه شود."
+    "guide": "اول repo و آخرین commit sync شود؛ بعد progress واقعی محاسبه شود.",
+    "statusSource": "seed"
   },
   {
     "id": "audiovido",
@@ -300,6 +311,7 @@
       "مرز Audiovido و Aivido باید یکدست شود."
     ],
     "guide": "اگر زیرمجموعه Aivido شد، در dashboard به subproject تبدیل شود.",
-    "repoFullName": "audiovido/AudioVido"
+    "repoFullName": "audiovido/AudioVido",
+    "statusSource": "seed"
   }
 ]

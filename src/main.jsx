@@ -16,17 +16,45 @@ function fmtDate(v){
   catch{return v}
 }
 function progressOf(p){
-  if(Number.isFinite(p.progress)) return p.progress;
-  const d=p.done?.length||0, a=p.doing?.length||0, t=p.todo?.length||0, all=d+a+t;
-  return all?Math.round(((d+a*.45)/all)*100):0;
+  if(
+    p.verification==="verified" &&
+    Number.isFinite(p.progress)
+  ){
+    return p.progress;
+  }
+
+  return null;
 }
 function reportOf(p){
-  const progress=Number.isFinite(p.progress)?`${p.progress}٪`:"درصد قطعی هنوز sync نشده";
-  let s=`${p.name}. پیشرفت: ${progress}. `;
-  s+=`${p.done?.length||0} کار انجام شده، ${p.doing?.length||0} کار در حال انجام و ${p.todo?.length||0} کار باقی مانده. `;
-  if(p.attention) s+=`این پروژه نیاز به پیگیری دارد. ${p.attentionReason||""}. `;
-  if(p.blockers?.[0]) s+=`مانع اصلی: ${p.blockers[0]}`;
-  else s+="مانع بحرانی ثبت نشده.";
+  let s=`${p.name}. `;
+
+  if(p.verification==="verified"){
+    s+=`وضعیت پروژه از قرارداد زنده و تأییدشده خوانده می‌شود. `;
+
+    if(Number.isFinite(p.progress)){
+      s+=`پیشرفت ثبت‌شده ${p.progress} درصد است. `;
+    }
+
+    s+=`${p.done?.length||0} کار انجام شده، ${p.doing?.length||0} کار در حال انجام و ${p.todo?.length||0} کار باقی مانده. `;
+  }
+  else if(p.verification==="partial"){
+    s+=`GitHub به پروژه متصل است، اما وضعیت تسک‌ها هنوز قرارداد تأییدشده ندارد. درصد پیشرفت نمایش داده نمی‌شود. `;
+  }
+  else{
+    s+=`Repository معتبر برای این پروژه هنوز متصل نشده است. `;
+  }
+
+  if(p.attention){
+    s+=`این پروژه نیاز به بررسی دارد. ${p.attentionReason||""}. `;
+  }
+
+  if(
+    p.verification==="verified" &&
+    p.blockers?.[0]
+  ){
+    s+=`مانع اصلی: ${p.blockers[0]}`;
+  }
+
   return s;
 }
 function speak(text){
@@ -82,12 +110,19 @@ function ProjectModal({p,onClose}){
           <div className="kicker">{p.kind}</div>
           <h2>{p.name}</h2>
           <p>{p.summary}</p>
+          <VerificationBadge p={p}/>
           <div className="detailMeta">
             <span className={p.attention?"warn":"ok"}>{p.attention?<AlertTriangle size={14}/>:<Check size={14}/>} {p.attention?"نیاز به پیگیری":"وضعیت پایدار"}</span>
             {p.live?.pushedAt&&<span><Clock3 size={14}/> آخرین push: {fmtDate(p.live.pushedAt)}</span>}
           </div>
         </div>
-        <Ring value={progress} unknown={!Number.isFinite(p.progress)}/>
+        <Ring
+          value={progress}
+          unknown={
+            p.verification!=="verified" ||
+            !Number.isFinite(progress)
+          }
+        />
       </div>
 
       <Robot project={p}/>
@@ -129,6 +164,28 @@ function ProjectModal({p,onClose}){
   </motion.div>
 }
 
+
+function VerificationBadge({p}){
+  if(p.verification==="verified"){
+    return <div className="verificationBadge verified">
+      <CheckCircle2/>
+      LIVE VERIFIED
+    </div>
+  }
+
+  if(p.verification==="partial"){
+    return <div className="verificationBadge partial">
+      <AlertTriangle/>
+      PARTIALLY VERIFIED
+    </div>
+  }
+
+  return <div className="verificationBadge disconnected">
+    <ShieldAlert/>
+    NOT CONNECTED
+  </div>
+}
+
 function Card({p,onOpen,index}){
   const progress=progressOf(p);
   return <motion.button className={`projectCard ${p.attention?"needsAttention":""}`} onClick={onOpen}
@@ -142,9 +199,34 @@ function Card({p,onOpen,index}){
       <h3>{p.name}</h3>
       <p>{p.summary}</p>
     </div>
+    <VerificationBadge p={p}/>
+
     <div className="cardProgress">
-      <div><span>{Number.isFinite(p.progress)?"پیشرفت":"وضعیت"}</span><b>{Number.isFinite(p.progress)?`${progress}%`:"SYNC"}</b></div>
-      <div className="bar"><i style={{width:`${progress}%`}}/></div>
+      <div>
+        <span>
+          {p.verification==="verified"
+            ? "پیشرفت تأییدشده"
+            : "Progress"}
+        </span>
+
+        <b>
+          {p.verification==="verified" && Number.isFinite(progress)
+            ? `${progress}%`
+            : "—"}
+        </b>
+      </div>
+
+      <div className="bar">
+        <i
+          style={{
+            width:
+              p.verification==="verified" &&
+              Number.isFinite(progress)
+                ? `${progress}%`
+                : "0%"
+          }}
+        />
+      </div>
     </div>
     <div className="cardStats">
       <span><CheckCircle2/> {p.done?.length||0}</span>

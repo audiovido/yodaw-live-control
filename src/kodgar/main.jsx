@@ -148,7 +148,13 @@ function Sidebar({counts, active, recent, selectedId, onSelect, executors, conne
   const [filter, setFilter] = useState("");
   const matches = (t)=> t.goal?.toLowerCase().includes(filter.toLowerCase());
   const executorChips = Object.entries(executors||{}).map(([id,info])=>({
-    id, ok: Boolean(info?.available),
+    id,
+    // Real health semantics from the backend: eligible is the routing
+    // truth; healthy adds auth/model context for the tooltip.
+    ok: Boolean(info?.eligible),
+    healthy: Boolean(info?.healthy),
+    error: info?.error_type || null,
+    detail: info?.detail || "",
   }));
 
   return (
@@ -185,7 +191,10 @@ function Sidebar({counts, active, recent, selectedId, onSelect, executors, conne
         <div className="kx-chips">
           {executorChips.length===0 && <span className="kx-chip">API offline</span>}
           {executorChips.map(c=>(
-            <span key={c.id} className={`kx-chip ${c.ok?"on":""}`} title={c.id}>{c.id}</span>
+            <span key={c.id}
+              className={`kx-chip ${c.ok?"on":""} ${(!c.ok && c.error)?"down":""}`}
+              title={`${c.id}${c.error?` — ${c.error}`:""}${c.detail?`\n${c.detail.slice(0,200)}`:""}`}
+            >{c.id}</span>
           ))}
         </div>
         {connectionError && <div className="kx-conn-err">{connectionError}</div>}

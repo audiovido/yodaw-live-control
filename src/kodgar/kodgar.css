@@ -125,6 +125,7 @@ body{
   border:1px solid var(--glass-border);color:var(--faint);
 }
 .kx-chip.on{color:var(--ok);border-color:rgba(52,211,153,.4)}
+.kx-chip.down{color:var(--err);border-color:rgba(248,113,113,.35);opacity:.85}
 .kx-conn-err{color:var(--err);font-size:10px}
 
 .kx-badge{

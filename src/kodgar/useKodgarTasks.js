@@ -23,7 +23,9 @@ export function useKodgarTasks() {
       ]);
       setTasks(listData.tasks || []);
       setCounts(listData.counts || {});
-      setExecutors(executorStatus);
+      // /executors returns { executors: {id: health, ...} } — unwrap
+      // so consumers see the per-id health map directly.
+      setExecutors(executorStatus?.executors || executorStatus || {});
       setConnectionError("");
     } catch (error) {
       setConnectionError(error.message || "Kodgar API unreachable");
